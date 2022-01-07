@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+:root{
+    --borderColor: 2196f3: 
+}
+body{
+    font-size: 62.5%;
+}
+
+.container{
+    min-height: 100vh;
+    background: #031323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px 30px;
+}
+.clock{
+    position: relative;
+    padding: 15px 30px;
+    overflow: hidden;
+}
+
+.clock .hours,
+.clock .minutes,
+.clock .seconds,
+.clock .minutes,
+.clock .ampm,
+.clock .colon{
+    color: #2196f3;
+    font-size: 3rem;
+    letter-spacing: 10px;
+    font-family: 'Orbitron';
+    text-shadow: 2px 4px 5px #98cefa;
+}
+
+.clock span:nth-child(1),
+.clock span:nth-child(2),
+.clock span:nth-child(3),
+.clock span:nth-child(4){
+    display: block;
+    position: absolute;
+}
+
+.clock span:nth-child(1){
+    top: 0;
+    left: -100%;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, #2196f3); 
+}
+.clock span:nth-child(2){
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(180deg, transparent, #2196f3);
+}
+.clock span:nth-child(3){
+    bottom: 0;
+    left: 100%;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(270deg, transparent, #2196f3);
+}
+.clock span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(360deg, transparent, #2196f3);   
+}
+@keyframes child0{
+    from{
+        left: -100%;
+    }
+    to{
+        left: 100%;
+    }
+}
+@keyframes child1{
+    from{
+        top: -100%;
+    }
+    to{
+        top: 100%;
+    }
+}
+@keyframes child2{
+    from{
+        left: 100%;
+    }
+    to{
+        left: -100%;
+    }
+}
+@keyframes child3{
+    from{
+        bottom: -100%;
+    }
+    to{
+        bottom: 100%;
+    }
+}
